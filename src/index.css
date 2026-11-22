@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-palm-green: #2E5339;
+  --color-palm-green-dark: #213D29;
+  --color-palm-green-soft: #E9F0EA;
+  --color-cream-paper: #FBF8F0;
+  --color-warm-sand: #EFE8D8;
+  --color-warm-sand-dark: #E2D8C3;
+  --color-gold-accent: #B8811F;
+  --color-gold-soft: #F7EEDB;
+  --color-clay-red: #9C4B33;
+  --color-clay-red-soft: #F9EAE5;
+  --color-estate-ink: #1C261E;
+  --color-estate-muted: #4A584D;
+
+  --font-sans: "Noto Sans Sinhala", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Noto Serif Sinhala", Georgia, Cambria, serif;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #FBF8F0;
+    color: #1C261E;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only-area {
+    display: block !important;
+    position: static !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
